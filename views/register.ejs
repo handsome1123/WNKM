@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/register.css">
+    <script src="/public/js/bootstrap.bundle.min.js"></script>
+    <title>Register
+    </title>
+</head>
+<body>
+    <div class="d-flex justify-content-center flex-wrap align-items">
+        <div class="card text-center " id="box">
+        <div class="form m-5">
+        <p style="font-size: xx-large;" class="">Register</p>
+		<p>Enter your personal information</p>
+    <form action="/signup" method="post">
+        <input type="text" placeholder="Username" class="form-control" id="username" name="username" >
+        <input type="text" placeholder="Useremail" class="form-control" id="useremail" name="email">
+        <input type="password" placeholder="Password" class="form-control" id="password" name="password" >
+        <br>
+        <button type="submit" id="btn" class="btn form-control text-white">Sign Up</button>
+        <div class="text-end">
+			<label class="text-black">if you already have an account, please </label> 
+			<a href="/">Login here</a>
+		</div>
+    </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

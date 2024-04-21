@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+        <script src="/public/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="/public/css/Browse.css">
+        <link rel="stylesheet" href="/public/css/nav.css">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- first item: brand name -->
+                <h1><a class="navbar-brand" href="#">Welcome from MFU Room
+                        Reservation </a></h1>
+            </div>
+        </nav>
+        <nav>
+            <div>
+                <a href="/student/browse_room">
+                    <button class="button3">Browse room</button>
+                </a>
+                <a href="/student/checking_requests">
+                    <button class="button4">Status</button>
+                </a>
+            </div>
+            <h3><%= user.username %></h3>
+            <div>
+                <a href="#">
+                    <button class="button1">History</button>
+                </a>
+                <a href="/logout">
+                    <button class="button2">Logout</button>
+                </a>
+            </div>
+        </nav>
+        <div class="bg-warning" style="height: 100%;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center bg-dark text-white fs-4" id="">Picture</th>
+                        <th class="text-start bg-dark text-white fs-4" id="">Room Name</th>
+                        <th class="text-center bg-dark text-white fs-4" id="">Time Slot</th>
+                        <th class="tex-start bg-dark text-white fs-4" id="">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% bookings.forEach(booking => { %>
+                    <tr>
+                        <td class="text-white mx-4 text-center" id="Table2">
+                            <div class="text-start text-dark">
+                                <img src="/img/<%= booking.image_path %>" alt=""  width="350px" height="200px" >
+                            </div>
+                        </td>
+                        <td class="text-white mx-4 text-center" id="Table2">
+                            <div class="text-start text-dark"> 
+                                <h4><%= booking.room_name %></h4>
+                            </div>
+                        </td>
+                        
+                        <td class="text-white mx-4 text-center" id="Table2">
+                            <div class="text-start text-dark"> 
+                                <h5><%= booking.start_time %> - <%= booking.end_time %></h5>
+                            </div>
+                        </td>
+                        
+                        <td class="text-white mx-4 text-center" id="Table2">
+                            <div class="text-start text-dark"> 
+                                <h3 class="text-warning"><%= booking.status %> </h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <p>Copyright © 2024 - All Rights Reserved</p>
+            <nav class="navfoot">
+                <a href="#">Help</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </nav>
+        </footer>
+    </body>
+</html>

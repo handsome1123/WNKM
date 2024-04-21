@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+        <script src="/public/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="/public/css/Browse.css">
+        <link rel="stylesheet" href="/public/css/nav.css">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- first item: brand name -->
+                <h1><a class="navbar-brand" href="#">Welcome from MFU Room
+                        Reservation </a></h1>
+            </div>
+        </nav>
+        <nav>
+            <div>
+                <a href="/student/browse_room">
+                    <button class="button3">Browse room</button>
+                </a>
+                <a href="/student/checking_requests">
+                    <button class="button4">Status</button>
+                </a>
+            </div>
+            <h3><%= user.username %></h3>
+            <div>
+                <a href="#">
+                    <button class="button1">History</button>
+                </a>
+                <a href="/logout">
+                    <button class="button2">Logout</button>
+                </a>
+            </div>
+        </nav>
+
+        <div class="bg-warning" style="height: 100%;">
+            <form action="/booking" method="post">
+                <input type="hidden" name="roomId" value="<%= roomId %>">
+                <input type="hidden" name="slotId" value="<%= slotId %>">
+                <input type="hidden" name="userId" value="<%= userId %>">
+                <img src="/img/<%= roomImage %>" alt id="roomImage" width="100%"
+                    height="200px"> <!-- Image tag to display room picture -->
+                <p><strong>Room Name:</strong> <%= roomName %></p>
+                <p><strong>Time Slot:</strong> <%= startTime %> - <%= endTime %>
+                </p>
+                <p><strong>Objective:</strong></p>
+                <div style="width: 30%; margin-left:35%;">
+                <textarea name="objective" id="objectiveInput" class="form-control"
+                    cols="10" rows="3"></textarea>
+                <div>
+                    <button type="submit" class="btn btn-primary mt-3"
+                        id="submitReservation">Submit</button>
+                    <button type="submit" class="btn btn-danger mt-3 mx-4"> <a
+                            href="/student/browse_room" class="text-white">Cancel</a> </button>
+                </div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <p>Copyright © 2024 - All Rights Reserved</p>
+            <nav class="navfoot">
+                <a href="#">Help</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </nav>
+        </footer>
+    </body>
+</html>

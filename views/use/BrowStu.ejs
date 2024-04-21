@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <script src="/public/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/public/css/Browse.css">
+    <link rel="stylesheet" href="/public/css/nav.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- first item: brand name -->
+            <h1><a class="navbar-brand" href="#">Welcome from MFU Room Reservation </a></h1>
+        </div>
+    </nav>
+    <nav>
+        
+        <div>
+            <a href="#">
+                <button class="button3">Browse room</button>
+            </a>
+            <a href="/student/checking_requests">
+                <button class="button4">Status</button>
+            </a>
+        </div>
+        <h3><%= user.username %></h3>
+        <div>
+            <a href="#">
+                <button class="button1">History</button>
+            </a>
+            <a href="/logout">
+                <button class="button2">Logout</button>
+            </a>
+        </div>
+    </nav>
+    <div>
+    <h1>Select a room for your study session</h1>
+   </div>
+   <table class="table table-striped table-bordered  w-100 " id="Table">
+    <thead class="table-dark" >
+        <tr>
+            <th class="text-center bg-dark text-white fs-4" id="">Picture</th>
+            <th class="text-start bg-dark text-white fs-4" id="">Room Name</th>
+            <th class="text-center bg-dark text-white fs-4" id="">Time Slot</th>
+            <th class="text-start bg-dark text-white fs-4" id="">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% rooms.forEach(room => { %>
+        <tr>
+            <td class="text-dark mx-4 text-center" id="Table1">
+                <img src="<%= room.image_path %>" alt="" width="350px" height="200px">
+            </td>
+            <td class="text-white mx-4 text-center bg-warning" id="Table2">
+                <div class="text-start text-dark"> 
+                    <h4><%= room.room_name %></h4>
+                </div>
+            </td>
+     
+            <td class="border-0" id="Table3">
+                <div class="mt-2">
+                    <% room.timeSlots.forEach(slot => { %>
+                    <p class=" border-2 px-3 py-2"><%= slot.start_time %> - <%= slot.end_time %></p>
+                    <% }); %>
+                </div>
+            </td>
+            <td class="border-0">
+                <% room.timeSlots.forEach(slot => { %>
+                    <div class="mt-2">
+                        <% if (slot.status === "free") { %> 
+                            <button class="btn btn-success btn-md px-3 py-2 text-center">
+                                <a href="/booking/?roomId=<%= room.room_id %>&userId=<%= userId %>&slotId=<%= slot.slot_id %>" class="text-white px-3">
+                                  <%= slot.status %>
+                                </a>
+                              </button>
+                        <% } else if (slot.status === 'pending') { %>
+                            <button class="btn btn-secondary btn-md px-3 py-2 text-center"><%= slot.status %></button>
+                        <% } else if (slot.status === 'reserved') { %>
+                            <button class="btn btn-warning btn-md px-3 py-2  text-center"><%= slot.status %></button>
+                        <% } else if (slot.status === 'disabled') { %>
+                            <button class="btn btn-danger btn-md px-3 py-2 text-center"><%= slot.status %></button>
+                        <% } %>
+                    </div>
+                    <% }); %>  
+            </td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+    <footer>
+        <p>Copyright © 2024 - All Rights Reserved</p>
+        <nav class="navfoot">
+            <a href="#" >Help</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </footer>
+</body>
+</html>

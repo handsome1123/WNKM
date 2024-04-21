@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/css/login.css">
+	<script src="/public/js/bootstrap.bundle.min.js"></script>
+	<title>Login</title>
+</head>
+<body>
+    <div class="d-flex justify-content-center flex-wrap align-items">
+        <div class="card text-center " id="box">
+        <div class="form m-5">
+        <form action="/signin" method="post">
+        <p style="font-size: xx-large;" class="">Login</p>
+		<p>Enter your detail to continue</p>
+        <input type="text" placeholder="Useremail" class="form-control" id="useremail" name="email"><br>
+        <input type="password" placeholder="Password" class="form-control" id="password" name="password"><br>
+        <br><br>
+        <button id="btn" type="submit" class="btn form-control text-white">Sign In</button>
+		<div class="text-end">
+			<label class="text-black">if you don't have an account, please </label> 
+			<a href="/signup">register here</a>
+		</div>
+        </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

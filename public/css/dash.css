@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    font-family: "Roboto",sans-serif;
+}
+h1{
+    color: white;
+}
+p{
+    color: white;
+    font-weight: 50;
+    font-size: 5;
+    margin-left: 90px;
+}
+.rooms {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.slots {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.slot {
+    width: 100px;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #cfcfcf;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+    
+}
+#Multi{
+    width: 230px;
+}
+span{
+    font-size: small;
+    color: rgb(86, 80, 80);
+}

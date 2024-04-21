@@ -1,0 +1,62 @@
+.container {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgb(225, 154, 23); /* Change the background color as needed */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    height: 95px;
+    width: 120px;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Change the hover background color as needed */
+    cursor: pointer;
+}
+body{
+    background-color: #285f99;
+}
+h1{
+    color: white;
+}
+.image-btn{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    padding: bottom 10px;;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    top: auto;
+    left:auto;
+    
+}
+img{
+    width: 50px;
+}
+.flex-container{
+    display: flex;
+    width: 300px;
+    height: 100px;
+}
+.container1{
+    flex: 1;
+    background: linear-gradient(to right, transparent 50%, purple);
+}
+.flex-container {
+    display: flex;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.container1 {
+    flex: 1;
+    background: linear-gradient(to right, #285f99 30%, purple 30%);
+}

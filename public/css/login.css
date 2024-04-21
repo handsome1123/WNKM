@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+    margin:100px;
+}
+#btn{
+    background-color: rgb(68, 68, 255);
+    padding: 10px;
+    margin-bottom:30px;
+}
+
+
+#box{
+    background-color: whitesmoke;
+   
+}
+#mfu{
+   margin-top: 100px;
+}
+a{
+    color:skyblue;
+}
+#useremail{
+    background-color: lightgray;
+}
+#password{
+    background-color: lightgray;
+}
+
+#Studentid{
+    background-color: lightgray;
+
+}

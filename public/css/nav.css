@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+/* footer */
+footer {
+    margin-top: auto;
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button1{
+    border-radius: 0.5rem;
+    width: 7rem;
+    height: 2rem;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: rgb(59, 59, 246);
+    box-shadow:  2px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.button2 {
+    border-radius: 0.5rem;
+    width: 7rem;
+    height: 2rem;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: black;
+    box-shadow:  2px 3px rgba(0, 0, 0, 0.1);
+
+}
+.button3 {
+    
+        background-color: #808080;
+        color: #ffffff;
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow:  2px 3px rgba(0, 0, 0, 0.1);
+      
+      
+}
+.button4 {
+    background-color: #808080;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow:  2px 3px rgba(0, 0, 0, 0.1);
+    
+}
+.button5 {
+    background-color: #808080;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow:  2px 3px rgba(0, 0, 0, 0.1);
+    
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    
+}
+p{
+    color: black;
+    text-align: center;
+}
+.title{
+    text-align: left;
+}
+
+
+
+

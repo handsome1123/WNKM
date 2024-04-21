@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+    
+}
+#btn{
+    background-color: rgb(68, 68, 255);
+    
+}
+
+
+#box{
+    background-color: whitesmoke;
+    margin-top: 90px;
+}
+
+a{
+    color:skyblue;
+}
+
+#password{
+    margin-bottom: 15px;
+    background-color: lightgray;
+}
+
+#useremail{
+    background-color: lightgray;
+    margin-bottom: 15px;
+
+}
+
+#username{
+    background-color: lightgray;
+    margin-bottom: 15px;
+
+}

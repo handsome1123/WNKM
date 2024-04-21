@@ -1,0 +1,48 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        #B0BFF3 0%,
+        #B0BFF3 25%,
+        #1D223F 25%,
+        #1D223F 100%
+    );
+}
+h1{
+    color:white;
+    text-align: center;
+    margin-right: 100px;
+
+}
+.image-btn1{
+    width: 150px;
+    height: auto;
+    border-radius: 7px;
+    background-color:rgb(108, 160, 177);
+    border: none;
+    cursor: pointer;
+    margin: 3px;
+    margin-left: 105px;
+}
+.img1{
+    width: 100px;
+    height: auto;
+}
+.img2{
+    width: 100px;
+    height: auto;
+}
+.image-btn2{
+    width: 150px;
+    height: auto;
+    border-radius: 7px;
+    background-color:rgb(108, 160, 177);
+    border: none;
+    cursor: pointer;
+    margin: 25px;
+    
+}
+.button-container{
+    text-decoration: none;
+}
